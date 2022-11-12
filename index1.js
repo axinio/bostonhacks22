@@ -46,4 +46,4 @@ xhr.onreadystatechange = function () {
     console.log(xhr.status);
     console.log(xhr.responseText);
   }};
-  xhr.send(data);
+  xhr.send(myJSON);
