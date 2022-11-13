@@ -14,7 +14,7 @@
             <label>Phone Number: <input id = "number" name = "number" value = ""/></label>
         </p>
         <p>
-            <label>How many major classes would you like: <input id = "majordesired" name = "majordesired" value = ""/></label>
+            <label>How many major classes would you like?: <input id = "majordesired" name = "majordesired" value = ""/></label>
         </p>
         <p>
             <label>How many hub classes would you like?: <input id = "hubdesired" name = "hubdesired" value = ""/></label>
@@ -25,6 +25,10 @@
         <p>
             <label>Class Already in Schedule (Separated by SemiColon): <input id = "classes" name = "classes" value = ""></label>
             <p> Example: CASCS111A1;CASCS112A1;</p>
+        </p>
+        <p>
+            <label>Classes Already Taken: <input id = "taken_classes" name = "taken_classes" value = ""></label>
+            <p> Example: CASCS101;CASCS103;</p>
         </p>
         <p>Hub Units Desired: </p>
         <ul>
@@ -51,6 +55,9 @@
             <li><input type = "checkbox" name = "hub" value = "CRI"/>Creativity/Innovation</li>
         </ul>
         <input type="submit" value = "Submit">
+    </form>
+    <form id = "myClear">
+        <input type="submit" value = "Clear">
     </form>
     <script src="index1.js"></script>
 </body>
