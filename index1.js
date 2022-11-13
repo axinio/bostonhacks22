@@ -86,4 +86,5 @@ function sendRequest(){
     let linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
+    linkElement.click()
 }
