@@ -80,6 +80,7 @@ function sendRequest(){
       console.log(xhr.responseText);
     }};
     xhr.send(myJSON);
+    /* DEBUG USE, DOWNLOADS JSON ONTO COMPUTER WHEN SUBMIT IS CLICKED
     let dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(myJSON);
     let exportFileDefaultName = 'data.json';
 
@@ -87,4 +88,5 @@ function sendRequest(){
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
     linkElement.click()
+    */
 }
