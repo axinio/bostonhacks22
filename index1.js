@@ -33,32 +33,39 @@ function getData(form) {
   document.getElementById("myForm").addEventListener("submit", function (e) {
     e.preventDefault();
     getData(e.target);
-    const pninput = document.getElementById("number");
-    pninput.value = "";
-    const m1input = document.getElementById("majordesired");
-    m1input.value = "";
-    const h1input = document.getElementById("hubdesired");
-    h1input.value = "";
-    const m2input = document.getElementById("major");
-    m2input.value = "";
-    const cinput = document.getElementById("classes");
-    cinput.value = "";
-    let elements = document.getElementsByName("hub");
-    for(let i = 0; i< elements.length;i++){
-        elements[i].checked = false;
-    }
-
+    sendRequest()
+  
   });
   
-const myJSON = JSON.stringify(dict);
-let xhr = new XMLHttpRequest();
-xhr.open("POST", "");
-xhr.setRequestHeader("Accept", "application/json");
-xhr.setRequestHeader("Content-Type", "application/json");
+function clearFields(){
+  const pninput = document.getElementById("number");
+  pninput.value = "";
+  const m1input = document.getElementById("majordesired");
+  m1input.value = "";
+  const h1input = document.getElementById("hubdesired");
+  h1input.value = "";
+  const m2input = document.getElementById("major");
+  m2input.value = "";
+  const cinput = document.getElementById("classes");
+  cinput.value = "";
+  let elements = document.getElementsByName("hub");
+  for(let i = 0; i< elements.length;i++){
+      elements[i].checked = false;
+  }
+}
 
-xhr.onreadystatechange = function () {
-  if (xhr.readyState === 4) {
-    console.log(xhr.status);
-    console.log(xhr.responseText);
-  }};
-  xhr.send(myJSON);
+function sendRequest(){
+  const myJSON = JSON.stringify(dict);
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "http://127.0.0.1:5000/api");
+  xhr.setRequestHeader("Accept", "application/json");
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.setRequestHeader("Access-Control-Allow-Private-Network", "true");
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      console.log(xhr.status);
+      console.log(xhr.responseText);
+    }};
+    xhr.send(myJSON);
+}
