@@ -70,7 +70,7 @@ function clearFields(){
 function sendRequest(){
   const myJSON = JSON.stringify(dict);
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", "http://107.22.196.208:8080/api");
+  xhr.open("POST", "http://172.31.84.151:8080/api");
   xhr.setRequestHeader("Accept", "application/json");
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.setRequestHeader("Access-Control-Allow-Private-Network", "true");
