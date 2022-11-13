@@ -40,8 +40,9 @@ function getData(form) {
     e.preventDefault();
     getData(e.target);
     sendRequest()
-  
   });
+
+
   document.getElementById("myClear").addEventListener("clear", function(e) {
     e.preventDefault;
     clearFields();
@@ -69,7 +70,7 @@ function clearFields(){
 function sendRequest(){
   const myJSON = JSON.stringify(dict);
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", "http://127.0.0.1:5000/api");
+  xhr.open("POST", "http://107.22.196.208/api");
   xhr.setRequestHeader("Accept", "application/json");
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.setRequestHeader("Access-Control-Allow-Private-Network", "true");
@@ -80,6 +81,7 @@ function sendRequest(){
       console.log(xhr.responseText);
     }};
     xhr.send(myJSON);
+
     /* DEBUG USE, DOWNLOADS JSON ONTO COMPUTER WHEN SUBMIT IS CLICKED
     let dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(myJSON);
     let exportFileDefaultName = 'data.json';
