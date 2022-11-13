@@ -33,6 +33,21 @@ function getData(form) {
   document.getElementById("myForm").addEventListener("submit", function (e) {
     e.preventDefault();
     getData(e.target);
+    const pninput = document.getElementById("number");
+    pninput.value = "";
+    const m1input = document.getElementById("majordesired");
+    m1input.value = "";
+    const h1input = document.getElementById("hubdesired");
+    h1input.value = "";
+    const m2input = document.getElementById("major");
+    m2input.value = "";
+    const cinput = document.getElementById("classes");
+    cinput.value = "";
+    let elements = document.getElementsByName("hub");
+    for(let i = 0; i< elements.length;i++){
+        elements[i].checked = false;
+    }
+
   });
   
 const myJSON = JSON.stringify(dict);
