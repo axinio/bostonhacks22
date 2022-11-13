@@ -19,4 +19,4 @@ def activate():
     return myResponse
 
 if __name__ == '__main__':
-    app.run(host = '107.22.196.208')
+    app.run(host="0.0.0.0",port=5000)
