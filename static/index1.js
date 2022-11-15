@@ -82,7 +82,7 @@ function sendRequest(){
     }};
     xhr.send(myJSON);
 
-    //DEBUG USE, DOWNLOADS JSON ONTO COMPUTER WHEN SUBMIT IS CLICKED
+    //DEBUG USE, DOWNLOADS JSON ONTO COMPUTER WHEN SUBMIT IS CLICKED yay
     let dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(myJSON);
     let exportFileDefaultName = 'data.json';
 
